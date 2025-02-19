@@ -1,11 +1,11 @@
-.welcome {
+.welcome-section {
     width: 100%;
     height: 720px;
     /* margin-top: 40px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c0c0c0;
+    background-color: #C0C0C0;
 }
 
 /* .welcome-video {
@@ -13,28 +13,84 @@
     height: 720px;
 } */
 
-.start-content {
+.welcome-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.start-content-text {
+.welcome-content-text {
     max-width: 360px;
 }
 
-.start-content-button {
+.welcome-content-button {
     width: 225px;
     height: 60px;
     margin-top: 40px;
-    background-color: #c8aa6e;
+    font-size: 16px;
+    background-color: #C8AA6E;
     border: none;
-    outline: #ffffff solid 1px;
+    outline: #FFFFFF solid 1px;
     outline-offset: 3px;
     cursor: pointer;
 }
 
-.start-content-button .text {
-    font-size: 16px;
+.game-registration-section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFFB3;
+}
+
+.game-registration-section .menu {
+    position: relative;
+    width: 582px;
+    padding: 112px 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #0A1428;
+}
+
+.game-registration-section .main-content {
+    margin-bottom: 48px;
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-registration-section .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #C8AA6E;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.game-registration-section .header {
+    font-size: 28px;
+}
+
+.game-registration-section .buttons {
+    gap: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-registration-section .registration-btn-content label, .game-registration-section .login-btn-content label {
+    font-size: 14px;
 }
