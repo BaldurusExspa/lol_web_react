@@ -1,9 +1,12 @@
-import "./Button.css"
+type TButton = {
+    children: string,
+    className: string,
+}
 
-export const Button = () => {
+export const Button: React.FC<TButton> = ({ children, className }) => {
     return (
-        <button>
-            
+        <button className={className}>
+            {children}
         </button>
     )
 }
