@@ -1,3 +1,5 @@
+/* Перенести стили кнопки MenuButton - riot-header-menu в отдельный файл */
+
 .riot-header {
     position: fixed;
     top: 0;
@@ -12,12 +14,26 @@
 .riot-header-menu {
     width: 100px;
     height: 100%;
-    margin-left: 40px;
+    padding-left: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.riot-header-logo {
+    position: relative;
+    width: 75px;
+    height: 24px;
+    margin: 0;
     border: none;
     outline: none;
-    background-color: #ffffff;
+    background-color: transparent;
     cursor: pointer;
 }
-.riot-header-menu:active{
-    background-color: red;
+
+/* .riot-header-menu svg {
+    pointer-events: none;
+} */
+.riot-header-menu svg:hover{
+    fill: #EB0029;
 }

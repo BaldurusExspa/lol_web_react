@@ -1,16 +1,24 @@
-import { Button } from "../functional-components/ButtonGroup";
+import { Button } from "../../functional-components/ButtonGroup/ButtonGroup";
 
-type TGameRegistrationSection = {
-  className: string;
+type TGameRegistrationModal = {
+  className: string,
+  setVisible: (visible: boolean) => void,
 };
 
-export const GameRegistrationSection: React.FC<TGameRegistrationSection> = ({
+export const GameRegistrationModal: React.FC<TGameRegistrationModal> = ({
   className,
+  setVisible, // Поменять на onClose
 }) => {
+  const checkTargetClick = (event: React.MouseEvent) => {
+    if (event.target === event.currentTarget) {
+      setVisible(false);
+    }
+  }
+
   return (
-    <section className={className}>
+    <section className={className} onClick={checkTargetClick}>
       <div className="menu">
-        <Button labelText="" className="close-btn" onClick={() => {}}>
+        <Button labelText="" className="close-btn" onClick={() => setVisible(false)}>
           X
         </Button>
         <div className="main-content">

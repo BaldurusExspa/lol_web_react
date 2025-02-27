@@ -1,7 +1,7 @@
 .welcome-section {
     width: 100%;
-    height: 720px;
-    /* margin-top: 40px; */
+    height: 640px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,12 +22,13 @@
 
 .welcome-content-text {
     max-width: 360px;
+    cursor: pointer;
 }
 
 .welcome-content-button {
     width: 225px;
     height: 60px;
-    margin-top: 40px;
+    margin-top: 48px;
     font-size: 16px;
     background-color: #C8AA6E;
     border: none;
@@ -36,7 +37,8 @@
     cursor: pointer;
 }
 
-.game-registration-section {
+.game-registration-modal {
+    top: 0;
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -44,30 +46,40 @@
     justify-content: center;
     align-items: center;
     background-color: #FFFFFFB3;
+    cursor: pointer;
+
+    opacity: 0;
+    animation: modal 0.5s forwards;
 }
 
-.game-registration-section .menu {
+@keyframes modal {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.game-registration-modal .menu {
     position: relative;
-    width: 582px;
-    padding: 112px 0 32px;
+    width: 1056px;
+    padding: 144px 0 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
     background-color: #0A1428;
+    cursor: default;
 }
 
-.game-registration-section .main-content {
-    margin-bottom: 48px;
-    gap: 48px;
+.game-registration-modal .main-content {
+    margin-bottom: 96px;
+    gap: 64px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.game-registration-section .close-btn {
+.game-registration-modal .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -80,17 +92,53 @@
     cursor: pointer;
 }
 
-.game-registration-section .header {
-    font-size: 28px;
+.game-registration-modal .header p {
+    font-size: 36px;
+    font-style: italic;
 }
 
-.game-registration-section .buttons {
+.game-registration-modal .buttons {
     gap: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.game-registration-section .registration-btn-content label, .game-registration-section .login-btn-content label {
-    font-size: 14px;
+.game-registration-modal .registration-btn {
+    min-width: 240px;
+    height: 64px;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    background-color: #59C1DE;
+    transition: 0.3s ease-in-out;
+}
+.game-registration-modal .registration-btn:hover {
+    background-color: #7ACDE4
+}
+
+.game-registration-modal .login-btn {
+    min-width: 240px;
+    height: 64px;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    background-color: #C8AA6E;
+    transition: 0.3s ease-in-out;
+}
+.game-registration-modal .login-btn:hover {
+    background-color: #D3BB8B;
+}
+
+.game-registration-modal .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.game-registration-modal .button-container label {
+    font-size: 18px;
+    font-weight: 100;
 }
